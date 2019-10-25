@@ -1,13 +1,5 @@
-node_modules/
-.DS_Store
-Thumbs.db
-.idea
-*.sublime*
+/node_modules/
 *.log
-*.psd
-*.ai
-css/*.css
-build/
-tmp/
-*.todo
-src/sass/_global/svg-sprite.scss
+dist
+.tern-port
+.idea
