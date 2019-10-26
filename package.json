@@ -2,9 +2,17 @@
   "name": "hexlet-jest",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+	"main": "dist/index.js",
+	"bin": {
+    "reverse": "dist/bin/reverse.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+		"build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +20,11 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "@babel/node": "^7.6.3",
+    "eslint-plugin-jest": "^22.20.0"
   }
 }
